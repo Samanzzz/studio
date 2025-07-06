@@ -7,7 +7,7 @@ export default function ContactPage() {
       <section id="contact" className="py-20 md:py-32 text-center">
         <h2 className="text-4xl md:text-6xl font-serif font-bold mb-4 text-foreground tracking-tighter">Let's Connect</h2>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out.
+          I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out using my social links or the form below.
         </p>
         <div className="flex justify-center gap-4">
             <Button size="lg" asChild>
@@ -27,6 +27,19 @@ export default function ContactPage() {
                   </a>
                 </Button>
             </div>
+        </div>
+        <div className="mt-20 w-full max-w-3xl mx-auto">
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSf0UFaTcl3yvXRLYZt-docMZHwGeLsky32vzfBO1pjfSxJUKA/viewform?embedded=true" 
+                width="100%"
+                height="1300"
+                frameBorder="0" 
+                marginHeight={0}
+                marginWidth={0}
+                className="rounded-lg border shadow-xl"
+            >
+                Loading…
+            </iframe>
         </div>
       </section>
     </div>
