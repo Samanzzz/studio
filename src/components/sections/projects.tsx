@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Panora",
     description: "Leveraging large language models (LLMs) to read, analyze, and categorize user feedback, providing actionable insights for product improvement.",
-    tags: ["LLM", "AI", "Feedback Analysis", "Python"],
+    tags: ["LLM", "AI", "Feedback Analysis", "Python", "Genkit"],
     link: "#"
   },
   {
@@ -34,12 +34,12 @@ export function Projects() {
   return (
     <section id="projects" className="py-20 bg-secondary">
       <div className="container mx-auto max-w-7xl px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 font-headline text-primary">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <h2 className="text-4xl font-bold text-center mb-12 font-headline text-foreground">Side Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="flex flex-col">
+            <Card key={index} className="flex flex-col bg-card/50 hover:bg-card/90 transition-colors duration-300">
               <CardHeader>
-                <CardTitle className="font-headline">{project.title}</CardTitle>
+                <CardTitle className="font-headline text-primary">{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col justify-between">

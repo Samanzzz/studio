@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Briefcase } from 'lucide-react';
 
 const experiences = [
     {
@@ -57,7 +56,7 @@ const experiences = [
     {
         role: "Co-Founder",
         company: "Cloud Impala",
-        period: "",
+        period: "Startup",
         description: [
             "Developed a comprehensive Agricultural Data Optimization Platform.",
             "Leveraged Python for backend analytics and React for the front-end.",
@@ -68,30 +67,21 @@ const experiences = [
 export function Experience() {
   return (
     <section id="experience" className="py-20">
-      <div className="container mx-auto max-w-4xl px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 font-headline text-primary">Experience</h2>
-        <div className="relative">
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 hidden md:block" aria-hidden="true"></div>
+      <div className="container mx-auto max-w-5xl px-4">
+        <h2 className="text-4xl font-bold text-center mb-12 font-headline text-foreground">Experience</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="mb-8 flex justify-between items-center w-full flex-row-reverse md:flex-row">
-              <div className="order-1 md:w-5/12"></div>
-              <div className="z-20 flex items-center order-1 bg-accent shadow-xl w-12 h-12 rounded-full">
-                <Briefcase className="mx-auto text-primary h-6 w-6" />
-              </div>
-              <div className="order-1 md:w-5/12">
-                <Card className="shadow-md hover:shadow-xl transition-shadow duration-300">
-                  <CardHeader>
+            <Card key={index} className="shadow-lg hover:shadow-primary/20 transition-shadow duration-300 border-transparent hover:border-primary/50 bg-card/50">
+                <CardHeader>
                     <CardTitle className="font-headline">{exp.role}</CardTitle>
-                    <CardDescription className="font-semibold text-accent">{exp.company} <span className="text-muted-foreground font-normal">| {exp.period}</span></CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
-                      {exp.description.map((item, i) => <li key={i}>{item}</li>)}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+                    <CardDescription className="font-semibold text-primary">{exp.company} <span className="text-muted-foreground font-normal">| {exp.period}</span></CardDescription>
+                </CardHeader>
+                <CardContent>
+                <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
+                    {exp.description.map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
+                </CardContent>
+            </Card>
           ))}
         </div>
       </div>
