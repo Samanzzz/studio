@@ -69,7 +69,7 @@ export default function ExperiencePage() {
   return (
     <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8">
       <section id="experience" className="py-20 md:py-28">
-        <h2 className="text-4xl md:text-5xl font-black mb-16 text-foreground tracking-tight">Career Journey</h2>
+        <h2 className="text-4xl md:text-5xl font-serif font-bold mb-16 text-foreground tracking-tight">Career Journey</h2>
         <div className="relative">
           <div className="absolute left-3 top-0 h-full w-0.5 bg-border -z-10"></div>
           <div className="space-y-12">
@@ -82,7 +82,7 @@ export default function ExperiencePage() {
                 </div>
                 <Card className="border-2 border-transparent hover:border-primary/50 transition-colors duration-300">
                     <CardHeader>
-                        <CardTitle className="text-2xl font-bold">{exp.role}</CardTitle>
+                        <CardTitle className="text-2xl font-serif font-bold">{exp.role}</CardTitle>
                         <CardDescription className="font-semibold text-primary">{exp.company} <span className="text-muted-foreground font-normal text-sm">| {exp.period}</span></CardDescription>
                     </CardHeader>
                     <CardContent>

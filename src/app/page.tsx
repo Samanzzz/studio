@@ -9,10 +9,10 @@ export default function Home() {
       <section id="home" className="py-20 md:py-32">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h1 className="text-5xl md:text-7xl font-black text-foreground tracking-tighter">
+            <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground tracking-tighter">
               Saman Khadivar
             </h1>
-            <p className="text-2xl text-primary font-bold">
+            <p className="text-2xl text-primary font-serif font-bold">
               Builder, Engineer, Researcher.
             </p>
             <p className="text-lg text-muted-foreground max-w-xl">

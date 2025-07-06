@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8">
       <section id="contact" className="py-20 md:py-32 text-center">
-        <h2 className="text-4xl md:text-6xl font-black mb-4 text-foreground tracking-tighter">Let's Connect</h2>
+        <h2 className="text-4xl md:text-6xl font-serif font-bold mb-4 text-foreground tracking-tighter">Let's Connect</h2>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out.
         </p>

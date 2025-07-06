@@ -26,7 +26,7 @@ export function Header() {
       <div className="flex h-16 items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 mr-4">
           <Code className="h-6 w-6 text-primary" />
-          <span className="font-bold text-lg hover:text-primary transition-colors">Saman Khadivar</span>
+          <span className="font-serif font-bold text-lg hover:text-primary transition-colors">Saman Khadivar</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-1 text-sm font-medium">
@@ -58,7 +58,7 @@ export function Header() {
               <div className="flex flex-col gap-6 p-6">
                 <Link href="/" className="flex items-center gap-2 mb-4" onClick={() => setIsMenuOpen(false)}>
                   <Code className="h-6 w-6 text-primary" />
-                  <span className="font-bold text-lg">Saman Khadivar</span>
+                  <span className="font-serif font-bold text-lg">Saman Khadivar</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (

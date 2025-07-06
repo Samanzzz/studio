@@ -34,12 +34,12 @@ export default function ProjectsPage() {
   return (
     <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <section id="projects" className="py-20 md:py-28">
-        <h2 className="text-4xl md:text-5xl font-black mb-12 text-foreground tracking-tight">Side Projects</h2>
+        <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12 text-foreground tracking-tight">Side Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="flex flex-col bg-secondary/50 hover:bg-secondary/80 transition-all duration-300 transform hover:-translate-y-1">
               <CardHeader>
-                <CardTitle className="text-xl font-bold text-primary">{project.title}</CardTitle>
+                <CardTitle className="text-xl font-serif font-bold text-primary">{project.title}</CardTitle>
                 <CardDescription className="text-muted-foreground">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col justify-between">

@@ -82,7 +82,7 @@ export default function OptimizerPage() {
     <main className="container mx-auto p-4 md:p-8">
       <Card className="max-w-4xl mx-auto">
         <CardHeader>
-          <CardTitle className="font-headline text-2xl">Content Optimizer</CardTitle>
+          <CardTitle className="font-serif font-bold text-2xl">Content Optimizer</CardTitle>
           <CardDescription>
             Analyze website content and visitor engagement to get AI-powered optimization suggestions.
           </CardDescription>
@@ -186,7 +186,7 @@ export default function OptimizerPage() {
 
           {(suggestions.length > 0 || error) && (
             <div className="mt-8">
-              <h3 className="text-xl font-bold mb-4 font-headline">Results</h3>
+              <h3 className="text-xl font-serif font-bold mb-4">Results</h3>
               {error && <p className="text-destructive">{error}</p>}
               {suggestions.length > 0 && (
                 <Card>
