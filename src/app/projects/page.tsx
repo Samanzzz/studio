@@ -2,27 +2,9 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
+import { siteData } from '@/lib/data';
 
-const projects = [
-  {
-    title: "Idlelib Beta version",
-    description: "An enhanced and more feature-rich version of the standard IDLElib Integrated Development Environment for Python.",
-    tags: ["Python", "IDE", "Developer Tools"],
-    link: "#"
-  },
-  {
-    title: "Agricultural Data Optimization Platform",
-    description: "A comprehensive platform developed at Cloud Impala that leverages Python for backend analytics and React for a user-friendly frontend to optimize agricultural data.",
-    tags: ["Python", "React", "Data Analytics", "Platform"],
-    link: "#"
-  },
-  {
-    title: "Data Management System",
-    description: "A multifunctional system for SullDog Company using Java, Docker, and Kubernetes to manage vast laboratory data sets, improving research efficiency.",
-    tags: ["Java", "Docker", "Kubernetes", "Data Management"],
-    link: "#"
-  }
-];
+const { projects } = siteData;
 
 export default function ProjectsPage() {
   return (

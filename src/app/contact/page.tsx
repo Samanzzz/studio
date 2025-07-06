@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { siteData } from "@/lib/data";
+
+const { contact } = siteData;
 
 export default function ContactPage() {
   return (
@@ -11,23 +14,23 @@ export default function ContactPage() {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" asChild>
-              <a href="mailto:saman@cyrutech.com">
+              <a href={`mailto:${contact.email}`}>
                 <Mail className="mr-2 h-5 w-5" /> Say Hello
               </a>
             </Button>
              <Button size="lg" variant="outline" asChild>
-              <a href="tel:8582471788">
+              <a href={`tel:${contact.phone.replace(/\D/g, '')}`}>
                 <Phone className="mr-2 h-5 w-5" /> Call Me
               </a>
             </Button>
             <div className="flex items-center gap-2">
                 <Button size="icon" variant="outline" asChild>
-                  <a href="https://www.linkedin.com/in/samankhadivar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <Linkedin className="h-5 w-5" />
                   </a>
                 </Button>
                 <Button size="icon" variant="outline" asChild>
-                  <a href="https://github.com/samankhadivar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <a href={contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <Github className="h-5 w-5" />
                   </a>
                 </Button>
@@ -35,7 +38,7 @@ export default function ContactPage() {
         </div>
         <div className="mt-20 w-full max-w-3xl mx-auto">
             <iframe 
-                src="https://docs.google.com/forms/d/e/1FAIpQLSf0UFaTcl3yvXRLYZt-docMZHwGeLsky32vzfBO1pjfSxJUKA/viewform?embedded=true" 
+                src={contact.formUrl}
                 width="100%"
                 height="1300"
                 frameBorder="0" 

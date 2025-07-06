@@ -3,8 +3,35 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Github, Linkedin, Mail, ArrowRight, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
+import { siteData } from '@/lib/data';
+
+function AboutContent() {
+  const { paragraphs, strongTerms } = siteData.about;
+
+  const renderParagraph = (paragraph: string) => {
+    // Create a regex to find all strong terms
+    const regex = new RegExp(`(${strongTerms.join('|')})`, 'g');
+    const parts = paragraph.split(regex);
+    
+    return parts.map((part, index) => 
+      strongTerms.includes(part) ? 
+      <strong key={index} className="font-semibold text-primary">{part}</strong> : 
+      part
+    );
+  };
+
+  return (
+    <>
+      {paragraphs.map((p, i) => (
+        <p key={i}>{renderParagraph(p)}</p>
+      ))}
+    </>
+  );
+}
 
 export default function Home() {
+  const { home, about, latestPost, contact } = siteData;
+
   return (
     <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
@@ -12,13 +39,13 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground tracking-tighter">
-              Saman Khadivar
+              {home.title}
             </h1>
             <p className="text-2xl text-primary font-serif font-bold">
-              Builder, Engineer, Researcher.
+              {home.subtitle}
             </p>
             <p className="text-lg text-muted-foreground max-w-xl">
-              I build robust, scalable software and explore new frontiers in technology. From enterprise solutions at AWS to founding startups, I turn complex problems into elegant, impactful products.
+              {home.description}
             </p>
             <div className="flex flex-wrap items-center gap-4">
                 <Button size="lg" asChild>
@@ -28,17 +55,17 @@ export default function Home() {
                 </Button>
                 <div className="flex items-center gap-2">
                   <Button size="icon" variant="outline" asChild>
-                    <a href="https://www.linkedin.com/in/samankhadivar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                       <Linkedin className="h-5 w-5" />
                     </a>
                   </Button>
                   <Button size="icon" variant="outline" asChild>
-                    <a href="https://github.com/samankhadivar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <a href={contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                       <Github className="h-5 w-5" />
                     </a>
                   </Button>
                    <Button size="icon" variant="outline" asChild>
-                      <a href="mailto:saman@cyrutech.com" aria-label="Email">
+                      <a href={`mailto:${contact.email}`} aria-label="Email">
                         <Mail className="h-5 w-5" />
                       </a>
                     </Button>
@@ -63,18 +90,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12 text-foreground tracking-tight">About Me</h2>
             <div className="prose prose-lg max-w-none space-y-6 text-foreground/90 leading-relaxed">
-              <p>
-                I'm a Software Development Engineer with a deep passion for the entire product lifecycle, from initial concept to scalable enterprise deployment. My journey in tech is driven by a desire to solve complex problems and build things that last.
-              </p>
-              <p>
-                My academic foundation is a Bachelor of Science in Computer Science from the <strong className="font-semibold text-primary">University of California San Diego (UCSD)</strong>, where I was an honors scholarship recipient and took on leadership roles like Project Development Manager at CSES Dev. This experience instilled in me the core principles of advanced data structures, algorithms, and software engineering.
-              </p>
-              <p>
-                Beyond academia, I've had the privilege of contributing to industry leaders like <strong className="font-semibold text-primary">Amazon Web Services</strong> and <strong className="font-semibold text-primary">Scripps</strong>. These roles gave me hands-on experience in cloud computing, ETL data pipelines, and data analytics, allowing me to build and automate systems that save hundreds of developer hours and power critical business functions.
-              </p>
-              <p>
-                As a co-founder of two startups, SullDog Company (acquired) and Cloud Impala, I've learned to navigate the challenges of building a business from the ground up, leading teams, and delivering innovative platforms. I thrive in collaborative environments and I'm always looking for the next big challenge to tackle in a Software Development role.
-              </p>
+              <AboutContent />
             </div>
         </div>
       </section>
@@ -88,22 +104,22 @@ export default function Home() {
                   <div className="flex items-center gap-3">
                     <Linkedin className="h-6 w-6 text-primary"/>
                     <div>
-                      <h3 className="font-bold text-foreground">Saman Khadivar</h3>
+                      <h3 className="font-bold text-foreground">{latestPost.author}</h3>
                       <p className="text-sm text-muted-foreground">Shared a post</p>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="prose prose-lg max-w-none text-foreground/90 leading-relaxed">
                     <p>
-                      Proud of the work we did at Cloud Impala on our Agricultural Data Optimization Platform. We built a system that uses Python for complex backend analytics and a clean React frontend to help farmers make better, data-driven decisions. It's rewarding to build tech that has a real-world impact.
+                      {latestPost.postText}
                     </p>
                     <p className="text-primary font-semibold">
-                      #AgriTech #DataAnalytics #React #Python #SaaS
+                      {latestPost.hashtags}
                     </p>
                 </CardContent>
                 <CardFooter>
                     <Button asChild variant="ghost">
-                        <a href="https://www.linkedin.com/in/samankhadivar/" target="_blank" rel="noopener noreferrer">
+                        <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">
                            <MessageSquare className="mr-2 h-5 w-5"/> View on LinkedIn
                         </a>
                     </Button>

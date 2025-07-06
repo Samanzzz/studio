@@ -2,27 +2,9 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
+import { siteData } from '@/lib/data';
 
-const researchItems = [
-  {
-    title: "Heat Stream Prediction for Ocean Data Collection",
-    description: "Utilized PyTorch for developing a predictive model for heat stream patterns in various ocean regions, aiming to assist in more accurate data collection for climate science.",
-    tags: ["PyTorch", "Data Science", "Oceanography", "Machine Learning"],
-    link: "#"
-  },
-  {
-    title: "Analysis of High-Resolution Genetic Imaging Datasets",
-    description: "Designed and programmed data-analyzing solutions using Pandas, PyTorch, and NumPy to process and interpret large-scale biomedical datasets from high-resolution genetic imaging.",
-    tags: ["Biomedical Imaging", "Data Analysis", "Python", "PyTorch"],
-    "link": "#"
-  },
-  {
-    "title": "Efficient Data Management in Scalable Laboratory Systems",
-    "description": "Led the development of a multifunctional Data Management System using Java, Docker, and Kubernetes. The research focused on architectural patterns for managing vast laboratory data sets to improve research and operational efficiency.",
-    "tags": ["Data Systems", "Kubernetes", "Scalability", "Java"],
-    "link": "#"
-  }
-];
+const { research: researchItems } = siteData;
 
 export default function ResearchPage() {
   return (

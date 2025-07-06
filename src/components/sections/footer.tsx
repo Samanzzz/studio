@@ -1,5 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail, Code, Phone } from 'lucide-react';
+import { siteData } from '@/lib/data';
+
+const { name, contact } = siteData;
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,27 +14,27 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <Code className="h-5 w-5" />
             <p className="text-sm">
-              &copy; {currentYear} Saman Khadivar. All Rights Reserved.
+              &copy; {currentYear} {name}. All Rights Reserved.
             </p>
           </div>
           <div className="flex gap-2">
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://www.linkedin.com/in/samankhadivar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://github.com/samankhadivar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href={contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="mailto:saman@cyrutech.com" aria-label="Email">
+              <a href={`mailto:${contact.email}`} aria-label="Email">
                 <Mail className="h-5 w-5" />
               </a>
             </Button>
              <Button variant="ghost" size="icon" asChild>
-              <a href="tel:8582471788" aria-label="Phone">
+              <a href={`tel:${contact.phone.replace(/\D/g, '')}`} aria-label="Phone">
                 <Phone className="h-5 w-5" />
               </a>
             </Button>
