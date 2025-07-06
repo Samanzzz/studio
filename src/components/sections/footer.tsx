@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Code } from 'lucide-react';
+import { Github, Linkedin, Mail, Code, Phone } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -26,8 +26,13 @@ export function Footer() {
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="mailto:s.khadivar.25@gmail.com" aria-label="Email">
+              <a href="mailto:saman@cyrutech.com" aria-label="Email">
                 <Mail className="h-5 w-5" />
+              </a>
+            </Button>
+             <Button variant="ghost" size="icon" asChild>
+              <a href="tel:8582471788" aria-label="Phone">
+                <Phone className="h-5 w-5" />
               </a>
             </Button>
           </div>

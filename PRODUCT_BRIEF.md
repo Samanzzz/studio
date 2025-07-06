@@ -192,7 +192,8 @@ This section contains the specific data used to populate the website's pages.
 
 ### **Contact Information**
 
-*   **Email**: `s.khadivar.25@gmail.com`
+*   **Email**: `saman@cyrutech.com`
 *   **LinkedIn**: `https://www.linkedin.com/in/samankhadivar/`
 *   **GitHub**: `https://github.com/samankhadivar`
 *   **Contact Form**: Embedded Google Form with the source URL `https://docs.google.com/forms/d/e/1FAIpQLSf0UFaTcl3yvXRLYZt-docMZHwGeLsky32vzfBO1pjfSxJUKA/viewform?embedded=true`
+*   **Phone**: `(858) 247-1788`

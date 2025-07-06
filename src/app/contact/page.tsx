@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 export default function ContactPage() {
   return (
@@ -9,10 +9,15 @@ export default function ContactPage() {
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out using my social links or the form below.
         </p>
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" asChild>
-              <a href="mailto:s.khadivar.25@gmail.com">
+              <a href="mailto:saman@cyrutech.com">
                 <Mail className="mr-2 h-5 w-5" /> Say Hello
+              </a>
+            </Button>
+             <Button size="lg" variant="outline" asChild>
+              <a href="tel:8582471788">
+                <Phone className="mr-2 h-5 w-5" /> Call Me
               </a>
             </Button>
             <div className="flex items-center gap-2">

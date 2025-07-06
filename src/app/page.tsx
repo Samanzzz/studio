@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import { Github, Linkedin, Mail, ArrowRight, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -37,7 +38,7 @@ export default function Home() {
                     </a>
                   </Button>
                    <Button size="icon" variant="outline" asChild>
-                      <a href="mailto:s.khadivar.25@gmail.com" aria-label="Email">
+                      <a href="mailto:saman@cyrutech.com" aria-label="Email">
                         <Mail className="h-5 w-5" />
                       </a>
                     </Button>
@@ -47,7 +48,7 @@ export default function Home() {
           <div className="relative group hidden md:block">
              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-purple-600 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
             <Image
-              src="headshot.jpeg"
+              src="/headshot.jpeg"
               alt="Saman Khadivar Headshot"
               width={500}
               height={500}
@@ -76,6 +77,39 @@ export default function Home() {
                 As a co-founder of two startups, SullDog Company (acquired) and Cloud Impala, I've learned to navigate the challenges of building a business from the ground up, leading teams, and delivering innovative platforms. I thrive in collaborative environments and I'm always looking for the next big challenge to tackle in a Software Development role.
               </p>
             </div>
+        </div>
+      </section>
+
+      {/* Latest Post Section */}
+      <section id="latest-post" className="py-20 md:py-28 border-t border-border">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12 text-foreground tracking-tight">Latest Post</h2>
+            <Card className="bg-secondary/30">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <Linkedin className="h-6 w-6 text-primary"/>
+                    <div>
+                      <h3 className="font-bold text-foreground">Saman Khadivar</h3>
+                      <p className="text-sm text-muted-foreground">Shared a post</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="prose prose-lg max-w-none text-foreground/90 leading-relaxed">
+                    <p>
+                      Excited to share insights from my work on Panora, where we're leveraging LLMs to analyze user feedback in real-time. The goal is to provide product teams with actionable insights faster than ever before. It's been a fascinating journey into the practical applications of generative AI in the enterprise space.
+                    </p>
+                    <p className="text-primary font-semibold">
+                      #AI #LLM #ProductManagement #SaaS
+                    </p>
+                </CardContent>
+                <CardFooter>
+                    <Button asChild variant="ghost">
+                        <a href="https://www.linkedin.com/in/samankhadivar/" target="_blank" rel="noopener noreferrer">
+                           <MessageSquare className="mr-2 h-5 w-5"/> View on LinkedIn
+                        </a>
+                    </Button>
+                </CardFooter>
+            </Card>
         </div>
       </section>
     </div>
