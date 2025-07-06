@@ -1,9 +1,9 @@
 export default function AboutPage() {
   return (
-    <div className="w-full max-w-5xl px-4 sm:px-6 lg:px-8">
-      <section id="about" className="py-20">
-        <h2 className="text-4xl font-bold mb-12 font-headline text-foreground">About Me</h2>
-        <div className="space-y-6 text-base text-foreground/90 text-justify leading-relaxed">
+    <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8">
+      <section id="about" className="py-20 md:py-28">
+        <h2 className="text-4xl md:text-5xl font-black mb-12 text-foreground tracking-tight">About Me</h2>
+        <div className="prose prose-invert prose-lg max-w-none space-y-6 text-foreground/90 leading-relaxed">
           <p>
             I'm a Software Development Engineer with a deep passion for the entire product lifecycle, from initial concept to scalable enterprise deployment. My journey in tech is driven by a desire to solve complex problems and build things that last.
           </p>
