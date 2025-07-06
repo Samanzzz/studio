@@ -5,12 +5,6 @@ import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: "Panora",
-    description: "Leveraging large language models (LLMs) to read, analyze, and categorize user feedback, providing actionable insights for product improvement.",
-    tags: ["LLM", "AI", "Feedback Analysis", "Python", "Genkit"],
-    link: "#"
-  },
-  {
     title: "Idlelib Beta version",
     description: "An enhanced and more feature-rich version of the standard IDLElib Integrated Development Environment for Python.",
     tags: ["Python", "IDE", "Developer Tools"],

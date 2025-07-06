@@ -96,10 +96,10 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="prose prose-lg max-w-none text-foreground/90 leading-relaxed">
                     <p>
-                      Excited to share insights from my work on Panora, where we're leveraging LLMs to analyze user feedback in real-time. The goal is to provide product teams with actionable insights faster than ever before. It's been a fascinating journey into the practical applications of generative AI in the enterprise space.
+                      Proud of the work we did at Cloud Impala on our Agricultural Data Optimization Platform. We built a system that uses Python for complex backend analytics and a clean React frontend to help farmers make better, data-driven decisions. It's rewarding to build tech that has a real-world impact.
                     </p>
                     <p className="text-primary font-semibold">
-                      #AI #LLM #ProductManagement #SaaS
+                      #AgriTech #DataAnalytics #React #Python #SaaS
                     </p>
                 </CardContent>
                 <CardFooter>
