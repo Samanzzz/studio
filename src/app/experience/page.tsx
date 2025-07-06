@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Briefcase } from 'lucide-react';
 import { siteData } from '@/lib/data';
-import Image from 'next/image';
 
 const { experience: experiences } = siteData;
 
@@ -22,24 +21,8 @@ export default function ExperiencePage() {
                 </div>
                 <Card className="border-2 border-transparent hover:border-primary/50 transition-colors duration-300">
                     <CardHeader>
-                        <div className="flex items-start gap-4">
-                            {exp.logo && (
-                                <div className="flex-shrink-0">
-                                    <Image
-                                        src={exp.logo.src}
-                                        alt={exp.logo.alt}
-                                        width={40}
-                                        height={40}
-                                        className="rounded-md object-contain"
-                                        data-ai-hint={exp.logo['data-ai-hint']}
-                                    />
-                                </div>
-                            )}
-                            <div className="flex-1">
-                                <CardTitle className="text-2xl font-serif font-bold">{exp.role}</CardTitle>
-                                <CardDescription className="font-semibold text-primary">{exp.company} <span className="text-muted-foreground font-normal text-sm">| {exp.period}</span></CardDescription>
-                            </div>
-                        </div>
+                        <CardTitle className="text-2xl font-serif font-bold">{exp.role}</CardTitle>
+                        <CardDescription className="font-semibold text-primary">{exp.company} <span className="text-muted-foreground font-normal text-sm">| {exp.period}</span></CardDescription>
                     </CardHeader>
                     <CardContent>
                     <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">

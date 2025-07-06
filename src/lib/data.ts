@@ -26,11 +26,6 @@ export const siteData = {
             role: "Software Dev Engineer",
             company: "Amazon Web Services",
             period: "October 2024 – Present",
-            logo: {
-                src: 'https://placehold.co/40x40.png',
-                alt: 'AWS Logo',
-                'data-ai-hint': 'cloud technology',
-            },
             description: [
                 "Designed and built a full service for auditing storage units’ health using ECS (Fargate) and Lambda.",
                 "Led a large-scale new type region build for 6 teams across the S3 Control Plane Organization.",
@@ -42,11 +37,6 @@ export const siteData = {
             role: "Product Software Engineer Intern",
             company: "Scripps",
             period: "Spring 2023 – Spring 2024",
-            logo: {
-                src: 'https://placehold.co/40x40.png',
-                alt: 'Scripps Logo',
-                'data-ai-hint': 'science research',
-            },
             description: [
                 "Developed and shipped multiple web app solutions from conception to launch.",
                 "Engineered ETL data pipelines using Python, and SQL.",
@@ -58,11 +48,6 @@ export const siteData = {
             role: "Software Engineer Intern",
             company: "UCSD Health",
             period: "September 2022 – June 2023",
-            logo: {
-                src: 'https://placehold.co/40x40.png',
-                alt: 'UCSD Health Logo',
-                'data-ai-hint': 'university medical',
-            },
             description: [
                 "Designed and programmed data-analyzing solutions with Pandas, PyTorch, NumPy for biomedical datasets.",
                 "Curated and preprocessed high-resolution genetic imaging datasets using PyTorch.",
@@ -73,11 +58,6 @@ export const siteData = {
             role: "Software Engineer Intern",
             company: "San Diego Supercomputer Centre",
             period: "June 2022 – September 2022",
-            logo: {
-                src: 'https://placehold.co/40x40.png',
-                alt: 'SDSC Logo',
-                'data-ai-hint': 'computer server',
-            },
             description: [
                 "Developed a web app for media recommendations with Django, React, and Node.js.",
                 "Created the same app natively using Swift & SwiftUI.",
@@ -88,11 +68,6 @@ export const siteData = {
             role: "Co-Founder",
             company: "SullDog Company",
             period: "Acquired",
-            logo: {
-                src: 'https://placehold.co/40x40.png',
-                alt: 'SullDog Company Logo',
-                'data-ai-hint': 'startup building',
-            },
             description: [
                 "Developed a multifunctional Data Management System using Java, Docker, and Kubernetes.",
                 "Managed vast laboratory data sets, improving research and operational efficiency.",
@@ -103,11 +78,6 @@ export const siteData = {
             role: "Co-Founder",
             company: "Cloud Impala",
             period: "Startup",
-            logo: {
-                src: 'https://placehold.co/40x40.png',
-                alt: 'Cloud Impala Logo',
-                'data-ai-hint': 'cloud agriculture',
-            },
             description: [
                 "Developed a comprehensive Agricultural Data Optimization Platform.",
                 "Leveraged Python for backend analytics and React for the front-end.",
