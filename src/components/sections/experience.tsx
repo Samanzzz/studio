@@ -71,7 +71,7 @@ export function Experience() {
         <h2 className="text-4xl font-bold text-center mb-12 font-headline text-foreground">Experience</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="shadow-lg hover:shadow-primary/20 transition-shadow duration-300 border-transparent hover:border-primary/50 bg-card/50">
+            <Card key={index} className="border bg-card hover:bg-secondary/50 transition-colors duration-300">
                 <CardHeader>
                     <CardTitle className="font-headline">{exp.role}</CardTitle>
                     <CardDescription className="font-semibold text-primary">{exp.company} <span className="text-muted-foreground font-normal">| {exp.period}</span></CardDescription>

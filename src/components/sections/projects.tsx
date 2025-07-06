@@ -32,12 +32,12 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="projects" className="py-20 bg-secondary">
+    <section id="projects" className="py-20">
       <div className="container mx-auto max-w-7xl px-4">
         <h2 className="text-4xl font-bold text-center mb-12 font-headline text-foreground">Side Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="flex flex-col bg-card/50 hover:bg-card/90 transition-colors duration-300">
+            <Card key={index} className="flex flex-col border bg-card hover:bg-secondary/50 transition-colors duration-300">
               <CardHeader>
                 <CardTitle className="font-headline text-primary">{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>

@@ -2,10 +2,10 @@ import { GraduationCap, Briefcase } from 'lucide-react';
 
 export function About() {
   return (
-    <section id="about" className="py-20 bg-secondary">
+    <section id="about" className="py-20">
       <div className="container mx-auto max-w-3xl px-4">
         <h2 className="text-4xl font-bold text-center mb-12 font-headline text-foreground">About Me</h2>
-        <div className="space-y-8 text-lg text-foreground/90 text-justify leading-relaxed">
+        <div className="space-y-6 text-base text-foreground/90 text-justify leading-relaxed">
           <p>
             I'm a Software Development Engineer with a deep passion for the entire product lifecycle, from initial concept to scalable enterprise deployment. My journey in tech is driven by a desire to solve complex problems and build things that last.
           </p>
