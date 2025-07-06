@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   output: 'export',
 
   basePath: process.env.BASE_PATH,
-  assetPrefix: process.env.BASE_PATH,
   
   images: {
     unoptimized: true, // Required for static export to work with next/image
