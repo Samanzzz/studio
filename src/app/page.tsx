@@ -48,7 +48,7 @@ export default function Home() {
           <div className="relative group hidden md:block">
              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-purple-600 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
             <Image
-              src="/headshot.jpeg"
+              src="/assets/headshot.jpeg"
               alt="Saman Khadivar Headshot"
               width={500}
               height={500}
