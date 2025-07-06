@@ -20,17 +20,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
       - name: Install dependencies
         run: npm install
       - name: Build with Next.js
         run: npm run build
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
       - name: Upload artifact
