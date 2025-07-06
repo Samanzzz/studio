@@ -74,7 +74,7 @@ export default function Home() {
           </div>
           <div className="hidden md:block">
             <Image
-              src="/assets/headshot.jpeg"
+              src="https://github.com/Samanzzz/studio/blob/master/headshot.jpeg?raw=true"
               alt="Saman Khadivar Headshot"
               width={500}
               height={500}
