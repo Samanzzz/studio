@@ -109,7 +109,7 @@ export const siteData = {
           title: "Heat Stream Prediction for Ocean Data Collection",
           description: "Utilized PyTorch for developing a predictive model for heat stream patterns in various ocean regions, aiming to assist in more accurate data collection for climate science.",
           tags: ["PyTorch", "Data Science", "Oceanography", "Machine Learning"],
-          link: "/assets/Advancing Climate Science through Machine Learning-Driven Prediction of Ocean Heat Streams.pdf",
+          link: "/Assets/Advancing Climate Science through Machine Learning-Driven Prediction of Ocean Heat Streams.pdf",
           audioLink: "https://notebooklm.google.com/notebook/de8907f0-41fd-4b6b-9fde-b6021ef47e9f/audio"
         },
         {
