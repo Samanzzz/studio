@@ -9,11 +9,14 @@ export const siteData = {
     about: {
         paragraphs: [
             "I'm a Software Development Engineer with a deep passion for the entire product lifecycle, from initial concept to scalable enterprise deployment. My journey in tech is driven by a desire to solve complex problems and build things that last.",
-            "My academic foundation is a Bachelor of Science in Computer Science from the University of California San Diego (UCSD), where I was an honors scholarship recipient and took on leadership roles like Project Development Manager at CSES Dev. This experience instilled in me the core principles of advanced data structures, algorithms, and software engineering.",
+            "My academic foundation is a Bachelor of Science in Computer Science from the University of California San Diego (UCSD), where I was an honors scholarship recipient and took on leadership roles like Project Development Manager at the Computer Science and Engineering Society at UCSD (CSES). This experience instilled in me the core principles of advanced data structures, algorithms, and software engineering.",
             "Beyond academia, I've had the privilege of contributing to industry leaders like Amazon Web Services and Scripps. These roles gave me hands-on experience in cloud computing, ETL data pipelines, and data analytics, allowing me to build and automate systems that save hundreds of developer hours and power critical business functions.",
             "As a co-founder of two startups, I've learned to navigate the challenges of building a business from the ground up, leading teams, and delivering innovative platforms. I thrive in collaborative environments and I'm always looking for the next big challenge to tackle in a Software Development role."
         ],
-        strongTerms: ["University of California San Diego (UCSD)", "Amazon Web Services", "Scripps"]
+        strongTerms: ["University of California San Diego (UCSD)", "Amazon Web Services", "Scripps"],
+        linkedTerms: {
+            "Computer Science and Engineering Society at UCSD (CSES)": "https://csesucsd.com/about"
+        }
     },
     latestPost: {
         author: "Saman Khadivar",

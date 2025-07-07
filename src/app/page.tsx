@@ -5,24 +5,51 @@ import { Github, Linkedin, Mail, ArrowRight, MessageSquare } from 'lucide-react'
 import Link from 'next/link';
 import { siteData } from '@/lib/data';
 
+// Helper function to escape regex special characters
+const escapeRegExp = (string: string) => {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+};
+
 function AboutContent() {
-  const { paragraphs, strongTerms } = siteData.about;
+  const { paragraphs, strongTerms, linkedTerms } = siteData.about as any;
 
   const renderParagraph = (paragraph: string) => {
-    // Create a regex to find all strong terms
-    const regex = new RegExp(`(${strongTerms.join('|')})`, 'g');
+    const termsToMatch = [
+      ...strongTerms,
+      ...(linkedTerms ? Object.keys(linkedTerms) : [])
+    ];
+    
+    if (termsToMatch.length === 0) {
+        return paragraph;
+    }
+    
+    const regex = new RegExp(`(${termsToMatch.map(escapeRegExp).join('|')})`, 'g');
     const parts = paragraph.split(regex);
     
-    return parts.map((part, index) => 
-      strongTerms.includes(part) ? 
-      <strong key={index} className="font-semibold text-primary">{part}</strong> : 
-      part
-    );
+    return parts.map((part, index) => {
+      if (linkedTerms && part in linkedTerms) {
+        return (
+          <a
+            href={linkedTerms[part as keyof typeof linkedTerms]}
+            key={index}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-primary underline hover:no-underline"
+          >
+            {part}
+          </a>
+        );
+      }
+      if (strongTerms.includes(part)) {
+        return <strong key={index} className="font-semibold text-primary">{part}</strong>;
+      }
+      return part;
+    });
   };
 
   return (
     <>
-      {paragraphs.map((p, i) => (
+      {paragraphs.map((p: string, i: number) => (
         <p key={i}>{renderParagraph(p)}</p>
       ))}
     </>
