@@ -4,7 +4,6 @@ import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Github, Linkedin, Mail, ArrowRight, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 import { siteData } from '@/lib/data';
-import { WordWallBackground } from '@/components/sections/word-wall-background';
 
 // Helper function to escape regex special characters
 const escapeRegExp = (string: string) => {
@@ -64,7 +63,6 @@ export default function Home() {
     <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
       <section id="home" className="relative overflow-hidden py-20 md:py-32">
-        <WordWallBackground />
         <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground tracking-tighter">
