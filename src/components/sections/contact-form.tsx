@@ -39,17 +39,18 @@ export function ContactForm() {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    const formData = new FormData();
-    formData.append(NAME_ENTRY_ID, values.name);
-    formData.append(EMAIL_ENTRY_ID, values.email);
-    formData.append(MESSAGE_ENTRY_ID, values.message);
+    // We'll use URLSearchParams to build a URL-encoded string.
+    const urlEncodedData = new URLSearchParams();
+    urlEncodedData.append(NAME_ENTRY_ID, values.name);
+    urlEncodedData.append(EMAIL_ENTRY_ID, values.email);
+    urlEncodedData.append(MESSAGE_ENTRY_ID, values.message);
 
     setIsSubmitting(true);
 
     try {
       await fetch(GOOGLE_FORM_ACTION_URL, {
         method: 'POST',
-        body: formData,
+        body: urlEncodedData,
         mode: 'no-cors',
       });
       
