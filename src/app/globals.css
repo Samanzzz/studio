@@ -72,13 +72,33 @@
 }
 
 @layer utilities {
-  .signature-path {
-    stroke-dasharray: 1100;
-    stroke-dashoffset: 1100;
-    animation: draw-signature 2.5s ease-in-out 0.5s forwards;
+  .node {
+    fill: hsl(var(--primary));
+    opacity: 0;
+    animation: pop-in 0.5s ease-out forwards;
   }
 
-  @keyframes draw-signature {
+  .line {
+    stroke: hsl(var(--primary));
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw-line 1s ease-out forwards;
+  }
+
+  @keyframes pop-in {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes draw-line {
     to {
       stroke-dashoffset: 0;
     }
