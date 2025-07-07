@@ -4,7 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Github, Linkedin, Mail, ArrowRight, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 import { siteData } from '@/lib/data';
-import { GeometricAnimation } from '@/components/saman-signature';
+import { CursiveSignature } from '@/components/saman-signature';
 
 // Helper function to escape regex special characters
 const escapeRegExp = (string: string) => {
@@ -109,7 +109,7 @@ export default function Home() {
               className="rounded-full object-cover mx-auto max-w-md"
               priority
             />
-            <GeometricAnimation className="absolute -bottom-10 -right-10 w-48 h-48 opacity-40 pointer-events-none" />
+            <CursiveSignature className="absolute -bottom-8 -right-8 w-64 h-64 text-foreground/80 opacity-70 pointer-events-none" />
           </div>
         </div>
       </section>
