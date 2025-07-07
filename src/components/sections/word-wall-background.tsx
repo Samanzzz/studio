@@ -43,7 +43,7 @@ export function WordWallBackground() {
   if (shuffledWords.length === 0) return null;
 
   const columns = Array(8).fill(null);
-  const durations = [40, 65, 50, 75, 60, 45, 80, 55];
+  const durations = [80, 130, 100, 150, 120, 90, 160, 110];
   const wordsPerColumn = Math.ceil(shuffledWords.length / 2);
 
   const getColumnWords = (index: number): string[] => {
