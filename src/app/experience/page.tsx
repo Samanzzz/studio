@@ -13,22 +13,22 @@ export default function ExperiencePage() {
       <section id="experience" className="py-20 md:py-28">
         <h2 className="text-4xl md:text-5xl font-serif font-bold mb-16 text-foreground tracking-tight">Career Journey</h2>
         <div className="relative">
-          <div className="absolute left-3 top-0 h-full w-0.5 bg-border -z-10"></div>
+          <div className="absolute left-6 top-0 h-full w-0.5 bg-border -z-10"></div>
           <div className="space-y-12">
             {(experiences as ExperienceItem[]).map((exp, index) => (
-              <div key={index} className="relative pl-10">
+              <div key={index} className="relative pl-16">
                 <div className="absolute left-0 top-1">
-                  <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center ring-8 ring-background overflow-hidden">
+                  <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center ring-8 ring-background overflow-hidden">
                     {exp.logo ? (
                       <Image
                         src={exp.logo}
                         alt={`${exp.company} logo`}
-                        width={32}
-                        height={32}
+                        width={48}
+                        height={48}
                         className="object-contain h-full w-full"
                       />
                     ) : (
-                      <Briefcase className="h-4 w-4 text-primary" />
+                      <Briefcase className="h-6 w-6 text-primary" />
                     )}
                   </div>
                 </div>
