@@ -10,16 +10,16 @@ export const siteData = {
         paragraphs: [
             "I'm a Software Development Engineer with a deep passion for the entire product lifecycle, from initial concept to scalable enterprise deployment. My journey in tech is driven by a desire to solve complex problems and build things that last.",
             "My academic foundation is a Bachelor of Science in Computer Science from the University of California San Diego (UCSD), where I was an honors scholarship recipient and took on leadership roles like Project Development Manager at CSES Dev. This experience instilled in me the core principles of advanced data structures, algorithms, and software engineering.",
-            "Beyond academia, I've had the privilege of contributing to industry leaders like Amazon Web Services and Scripps. These roles gave me hands-on experience in cloud computing, ETL data pipelines, and data analytics, allowing me to build and automate systems that save hundreds of developer hours and power critical business functions.",
+            "Beyond academia, I've had the privilege of contributing to industry leaders like Amazon Web Services. These roles gave me hands-on experience in cloud computing, ETL data pipelines, and data analytics, allowing me to build and automate systems that save hundreds of developer hours and power critical business functions.",
             "As a co-founder of two startups, I've learned to navigate the challenges of building a business from the ground up, leading teams, and delivering innovative platforms. I thrive in collaborative environments and I'm always looking for the next big challenge to tackle in a Software Development role."
         ],
-        strongTerms: ["University of California San Diego (UCSD)", "Amazon Web Services", "Scripps"] 
+        strongTerms: ["University of California San Diego (UCSD)", "Amazon Web Services"]
     },
     latestPost: {
         author: "Saman Khadivar",
         platform: "LinkedIn",
-        postText: "Excited to share a project I've been working on: an enhanced beta version of Python's standard IDLElib. It's packed with new features to boost developer productivity. It's been a great exercise in diving deep into developer tooling.",
-        hashtags: "#Python #DeveloperTools #IDE #OpenSource",
+        postText: "Thrilled to announce that I have started a new position as a Software Development Engineer at Amazon Web Services (AWS) on the S3 team! I'm incredibly excited to join such an innovative team and contribute to the services that power so much of the internet. Looking forward to the challenges and growth ahead.",
+        hashtags: "#AWS #S3 #SoftwareEngineer #NewBeginnings #CloudComputing",
     },
     experience: [
         {
