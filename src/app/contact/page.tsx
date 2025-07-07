@@ -1,12 +1,13 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { siteData } from "@/lib/data";
+import { ContactForm } from '@/components/sections/contact-form';
+import { Separator } from '@/components/ui/separator';
 
 const { contact } = siteData;
 
 export default function ContactPage() {
   return (
-    <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <section id="contact" className="py-20 md:py-28">
         <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground tracking-tight">Get In Touch</h2>
@@ -15,38 +16,52 @@ export default function ContactPage() {
             </p>
         </div>
 
-        <div className="max-w-lg mx-auto mb-12">
-            <div className="flex flex-wrap justify-center gap-4">
-                 <Button asChild>
-                    <a href={`mailto:${contact.email}`}>
-                        <Mail className="mr-2 h-4 w-4" /> Email Me
-                    </a>
-                </Button>
-                 <Button asChild variant="secondary">
-                    <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">
-                        <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
-                    </a>
-                </Button>
-                <Button asChild variant="secondary">
-                    <a href={contact.github} target="_blank" rel="noopener noreferrer">
-                       <Github className="mr-2 h-4 w-4" /> GitHub
-                    </a>
-                </Button>
-            </div>
-        </div>
+        <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div className="space-y-8">
+                <div>
+                    <h3 className="text-2xl font-serif font-bold text-primary mb-4">Contact Information</h3>
+                    <p className="text-muted-foreground">
+                        Here's how you can reach me directly. I'm looking forward to hearing from you.
+                    </p>
+                </div>
 
-        <div className="w-full mx-auto bg-card border rounded-lg shadow-lg overflow-hidden">
-           <iframe 
-                src={contact.formUrl} 
-                width="100%" 
-                height="850" 
-                frameBorder="0" 
-                marginHeight={0} 
-                marginWidth={0}
-                className="w-full"
-            >
-                Loading…
-            </iframe>
+                <div className="space-y-4">
+                    <a href={`mailto:${contact.email}`} className="flex items-center gap-4 group">
+                        <Mail className="h-6 w-6 text-primary" />
+                        <div>
+                            <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Email</p>
+                            <p className="text-muted-foreground">{contact.email}</p>
+                        </div>
+                    </a>
+                    <Separator />
+                    <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                        <Linkedin className="h-6 w-6 text-primary" />
+                        <div>
+                            <p className="font-semibold text-foreground group-hover:text-primary transition-colors">LinkedIn</p>
+                            <p className="text-muted-foreground">linkedin.com/in/samankhadivar</p>
+                        </div>
+                    </a>
+                    <Separator />
+                     <a href={contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                        <Github className="h-6 w-6 text-primary" />
+                        <div>
+                            <p className="font-semibold text-foreground group-hover:text-primary transition-colors">GitHub</p>
+                            <p className="text-muted-foreground">github.com/Samanzzz</p>
+                        </div>
+                    </a>
+                    <Separator />
+                     <a href={`tel:${contact.phone.replace(/\D/g, '')}`} className="flex items-center gap-4 group">
+                        <Phone className="h-6 w-6 text-primary" />
+                        <div>
+                            <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Phone</p>
+                            <p className="text-muted-foreground">{contact.phone}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <ContactForm />
+
         </div>
       </section>
     </div>
