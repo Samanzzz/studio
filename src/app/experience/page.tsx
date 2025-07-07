@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Briefcase } from 'lucide-react';
 import { siteData } from '@/lib/data';
 import Image from 'next/image';
@@ -18,17 +18,17 @@ export default function ExperiencePage() {
             {(experiences as ExperienceItem[]).map((exp, index) => (
               <div key={index} className="relative pl-10">
                 <div className="absolute left-0 top-1">
-                  <div className="h-6 w-6 rounded-full bg-white flex items-center justify-center ring-8 ring-background overflow-hidden">
+                  <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center ring-8 ring-background overflow-hidden">
                     {exp.logo ? (
                       <Image
                         src={exp.logo}
                         alt={`${exp.company} logo`}
-                        width={24}
-                        height={24}
+                        width={32}
+                        height={32}
                         className="object-contain h-full w-full"
                       />
                     ) : (
-                      <Briefcase className="h-3 w-3 text-primary" />
+                      <Briefcase className="h-4 w-4 text-primary" />
                     )}
                   </div>
                 </div>
@@ -37,13 +37,6 @@ export default function ExperiencePage() {
                         <CardTitle className="text-2xl font-serif font-bold">{exp.role}</CardTitle>
                         <CardDescription className="font-semibold text-primary">{exp.company} <span className="text-muted-foreground font-normal text-sm">| {exp.period}</span></CardDescription>
                     </CardHeader>
-                    {exp.description && exp.description.length > 0 && (
-                      <CardContent>
-                        <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-                            {exp.description.map((item, i) => <li key={i}>{item}</li>)}
-                        </ul>
-                      </CardContent>
-                    )}
                 </Card>
               </div>
             ))}

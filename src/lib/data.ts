@@ -29,67 +29,36 @@ export const siteData = {
             role: "Software Dev Engineer",
             company: "Amazon Web Services",
             period: "October 2024 – Present",
-            description: [
-                "Designed and built a full service for auditing storage units’ health using ECS (Fargate) and Lambda.",
-                "Led a large-scale new type region build for 6 teams across the S3 Control Plane Organization.",
-                "Implemented automation of Dynamic Configurations for 2 services using AppConfig, saving 200+ developer hours annually.",
-                "Improved an existing service using multithreading and async processing."
-            ],
             logo: "https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png"
         },
         {
             role: "Product Software Engineer Intern",
             company: "Scripps",
             period: "Spring 2023 – Spring 2024",
-            description: [
-                "Developed and shipped multiple web app solutions from conception to launch.",
-                "Engineered ETL data pipelines using Python, and SQL.",
-                "Presented data visualizations to stakeholders using Tableau, Power BI, and Python libraries.",
-                "Utilized PyTorch for heat stream prediction in ocean regions to assist data collection."
-            ],
             logo: "https://s3.us-west-2.amazonaws.com/media.ooica.net/wp-content/uploads/2019/01/03214558/scrippslogo.png"
         },
         {
             role: "Software Engineer Intern",
             company: "UCSD Health",
             period: "September 2022 – June 2023",
-            description: [
-                "Designed and programmed data-analyzing solutions with Pandas, PyTorch, NumPy for biomedical datasets.",
-                "Curated and preprocessed high-resolution genetic imaging datasets using PyTorch.",
-                "Educated stakeholders on compliance and set up automated script testing."
-            ],
             logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Seal_of_the_University_of_California%2C_San_Diego.svg/1200px-Seal_of_the_University_of_California%2C_San_Diego.svg.png"
         },
          {
             role: "Software Engineer Intern",
             company: "San Diego Supercomputer Centre",
             period: "June 2022 – September 2022",
-            description: [
-                "Developed a web app for media recommendations with Django, React, and Node.js.",
-                "Created the same app natively using Swift & SwiftUI.",
-                "Built back-end services and APIs for user data and recommendations."
-            ],
             logo: "https://yt3.googleusercontent.com/ytc/AIdro_nqrkke-Md5dwkZDRjOaHrjfdhsByNrgligtDBLg7NXsA=s900-c-k-c0x00ffffff-no-rj"
         },
          {
             role: "Co-Founder",
             company: "SullDog Company",
             period: "Acquired",
-            description: [
-                "Developed a multifunctional Data Management System using Java, Docker, and Kubernetes.",
-                "Managed vast laboratory data sets, improving research and operational efficiency.",
-                "Led a team of 15 developers and 5 project managers."
-            ],
             logo: "https://cyrutech.com/assets/images/logo/sulldog-logoo.png"
         },
         {
             role: "Co-Founder",
             company: "Cloud Impala",
             period: "Startup",
-            description: [
-                "Developed a comprehensive Agricultural Data Optimization Platform.",
-                "Leveraged Python for backend analytics and React for the front-end."
-            ],
             logo: "https://cyrutech.com/assets/images/logo/impala-logo.png"
         }
     ],
