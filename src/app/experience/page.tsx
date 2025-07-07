@@ -24,11 +24,13 @@ export default function ExperiencePage() {
                         <CardTitle className="text-2xl font-serif font-bold">{exp.role}</CardTitle>
                         <CardDescription className="font-semibold text-primary">{exp.company} <span className="text-muted-foreground font-normal text-sm">| {exp.period}</span></CardDescription>
                     </CardHeader>
-                    <CardContent>
-                    <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-                        {exp.description.map((item, i) => <li key={i}>{item}</li>)}
-                    </ul>
-                    </CardContent>
+                    {exp.description && exp.description.length > 0 && (
+                      <CardContent>
+                        <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+                            {exp.description.map((item, i) => <li key={i}>{item}</li>)}
+                        </ul>
+                      </CardContent>
+                    )}
                 </Card>
               </div>
             ))}
