@@ -13,6 +13,7 @@ const navLinks = [
   { href: '/experience', label: 'Experience' },
   { href: '/projects', label: 'Projects' },
   { href: '/research', label: 'Research' },
+  { href: '/playground', label: 'Playground' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -53,11 +54,11 @@ export function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
-              <SheetHeader className="sr-only">
-                <SheetTitle>Mobile Menu</SheetTitle>
+            <SheetContent side="right" className="p-0">
+              <SheetHeader className="p-6 pb-2">
+                <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-6 p-6 pt-0">
                 <Link href="/" className="flex items-center gap-2 mb-4" onClick={() => setIsMenuOpen(false)}>
                   <Code className="h-6 w-6 text-primary" />
                   <span className="font-serif font-bold text-lg">Saman Khadivar</span>
