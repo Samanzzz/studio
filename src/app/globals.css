@@ -70,3 +70,17 @@
     @apply scroll-mt-20;
   }
 }
+
+@layer utilities {
+  .signature-path {
+    stroke-dasharray: 1100;
+    stroke-dashoffset: 1100;
+    animation: draw-signature 2.5s ease-in-out 0.5s forwards;
+  }
+
+  @keyframes draw-signature {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}
