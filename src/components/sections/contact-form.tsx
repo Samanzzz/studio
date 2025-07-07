@@ -39,7 +39,6 @@ export function ContactForm() {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    // We'll use URLSearchParams to build a URL-encoded string.
     const urlEncodedData = new URLSearchParams();
     urlEncodedData.append(NAME_ENTRY_ID, values.name);
     urlEncodedData.append(EMAIL_ENTRY_ID, values.email);
@@ -79,7 +78,7 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="w-full shadow-lg border-0">
+    <Card className="w-full shadow-lg border-0 bg-secondary/30">
       <CardHeader>
         <CardTitle className="text-2xl font-serif">Send a Message</CardTitle>
         <CardDescription>Fill out the form below and I'll get back to you.</CardDescription>
