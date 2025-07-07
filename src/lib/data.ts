@@ -109,7 +109,7 @@ export const siteData = {
         email: "saman@cyrutech.com",
         phone: "(858) 247-1788",
         linkedin: "https://www.linkedin.com/in/samankhadivar/",
-        github: "https://github.com/samankhadivar",
+        github: "https://github.com/Samanzzz",
         formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSf0UFaTcl3yvXRLYZt-docMZHwGeLsky32vzfBO1pjfSxJUKA/viewform?embedded=true"
     }
 };
