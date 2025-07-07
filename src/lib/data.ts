@@ -94,8 +94,8 @@ export const siteData = {
           title: "Analysis of High-Resolution Genetic Imaging Datasets",
           description: "Designed and programmed data-analyzing solutions using Pandas, PyTorch, and NumPy to process and interpret large-scale biomedical datasets from high-resolution genetic imaging.",
           tags: ["Biomedical Imaging", "Data Analysis", "Python", "PyTorch"],
-          link: "#",
-          audioLink: "#"
+          link: "https://drive.google.com/file/d/1Ho_Zu1FVSFNR002BeTsLX__xEPnPLYf7/view?usp=sharing",
+          audioLink: "https://notebooklm.google.com/notebook/2aa5d380-27c2-4765-b380-288c2de306f5/audio"
         },
         {
           title: "Efficient Data Management in Scalable Laboratory Systems",
