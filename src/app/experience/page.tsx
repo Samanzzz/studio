@@ -1,8 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Briefcase } from 'lucide-react';
 import { siteData } from '@/lib/data';
+import Image from 'next/image';
 
 const { experience: experiences } = siteData;
+
+type ExperienceItem = (typeof experiences)[0] & { logo?: string };
 
 export default function ExperiencePage() {
   return (
@@ -12,11 +15,21 @@ export default function ExperiencePage() {
         <div className="relative">
           <div className="absolute left-3 top-0 h-full w-0.5 bg-border -z-10"></div>
           <div className="space-y-12">
-            {experiences.map((exp, index) => (
+            {(experiences as ExperienceItem[]).map((exp, index) => (
               <div key={index} className="relative pl-10">
                 <div className="absolute left-0 top-1">
-                  <div className="h-6 w-6 rounded-full bg-secondary flex items-center justify-center ring-8 ring-background">
-                    <Briefcase className="h-3 w-3 text-primary" />
+                  <div className="h-6 w-6 rounded-full bg-white flex items-center justify-center ring-8 ring-background overflow-hidden">
+                    {exp.logo ? (
+                      <Image
+                        src={exp.logo}
+                        alt={`${exp.company} logo`}
+                        width={24}
+                        height={24}
+                        className="object-contain h-full w-full"
+                      />
+                    ) : (
+                      <Briefcase className="h-3 w-3 text-primary" />
+                    )}
                   </div>
                 </div>
                 <Card className="border-2 border-transparent hover:border-primary/50 transition-colors duration-300">
