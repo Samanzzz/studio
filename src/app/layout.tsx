@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <head>
-        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cstyle%3Etext %7B fill: black; font-size: 14px; font-weight: bold; font-family: Lora, serif; %7D @media (prefers-color-scheme: dark) %7B text %7B fill: white; %7D %7D%3C/style%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+        <link rel="icon" href="https://github.com/Samanzzz/studio/blob/master/headshot.jpeg?raw=true" type="image/jpeg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
