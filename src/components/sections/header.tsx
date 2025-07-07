@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Menu, Code } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
@@ -54,7 +54,10 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
-              <div className="flex flex-col gap-6 p-6">
+              <SheetHeader className="sr-only">
+                <SheetTitle>Mobile Menu</SheetTitle>
+              </SheetHeader>
+              <div className="flex flex-col gap-6">
                 <Link href="/" className="flex items-center gap-2 mb-4" onClick={() => setIsMenuOpen(false)}>
                   <Code className="h-6 w-6 text-primary" />
                   <span className="font-serif font-bold text-lg">Saman Khadivar</span>
