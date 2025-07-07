@@ -58,7 +58,7 @@ export function WordWallBackground() {
   return (
     <div
       aria-hidden="true"
-      className="absolute inset-0 -z-10 flex items-start justify-around gap-8 overflow-hidden text-muted-foreground/10 font-mono text-sm select-none"
+      className="absolute inset-0 -z-10 flex items-start justify-around gap-8 overflow-hidden text-muted-foreground/20 font-mono text-sm select-none"
     >
       {columns.map((_, i) => (
          <WordColumn 
