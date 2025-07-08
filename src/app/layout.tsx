@@ -7,6 +7,9 @@ import { Footer } from '@/components/sections/footer';
 export const metadata: Metadata = {
   title: 'Saman Khadivar | Builder & Researcher',
   description: 'Personal website for Saman Khadivar, a software engineer and researcher passionate about building great products.',
+  icons: {
+    icon: 'https://www.favicon.cc/logo3d/759628.png',
+  }
 };
 
 export default function RootLayout({
@@ -17,7 +20,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <head>
-        <link rel="icon" href="https://www.favicon.cc/logo3d/759628.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
