@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <head>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='hsl(240 5.9% 10%)' /><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-size='60' font-weight='bold' fill='hsl(0 0% 98%)'>SK</text></svg>" />
+        <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Eo_circle_blue_letter-s.svg/2048px-Eo_circle_blue_letter-s.svg.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
