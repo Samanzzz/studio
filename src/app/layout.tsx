@@ -7,15 +7,6 @@ import { Footer } from '@/components/sections/footer';
 export const metadata: Metadata = {
   title: 'Saman Khadivar | Builder & Researcher',
   description: 'Personal website for Saman Khadivar, a software engineer and researcher passionate about building great products.',
-  icons: {
-    icon: [
-      { url: '/Assets/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/Assets/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/Assets/apple-touch-icon.png' },
-    ]
-  },
 };
 
 export default function RootLayout({
@@ -26,6 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <head>
+        <link rel="icon" href="/Assets/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/Assets/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/Assets/favicon-16x16.png" />
+        <link rel="apple-touch-icon" href="/Assets/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
