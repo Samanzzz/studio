@@ -8,8 +8,30 @@ export const metadata: Metadata = {
   title: 'Saman Khadivar | Builder & Researcher',
   description: 'Personal website for Saman Khadivar, a software engineer and researcher passionate about building great products.',
   icons: {
-    icon: 'https://www.favicon.cc/logo3d/759628.png',
-  }
+    icon: '/assets/favicon.ico',
+    shortcut: '/assets/favicon-16x16.png',
+    apple: '/assets/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        url: '/assets/favicon-32x32.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        url: '/assets/favicon-16x16.png',
+      },
+      {
+        rel: 'android-chrome',
+        sizes: '192x192',
+        url: '/assets/android-chrome-192x192.png'
+      }
+    ]
+  },
+  manifest: '/assets/site.webmanifest',
 };
 
 export default function RootLayout({
