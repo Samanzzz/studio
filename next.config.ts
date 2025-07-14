@@ -1,8 +1,19 @@
 import type {NextConfig} from 'next';
+import { join } from 'path';
 
 const nextConfig: NextConfig = {
   output: 'export',
   
+  // This allows you to serve static files from the 'Assets' directory.
+  // The path is resolved relative to the project root.
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Assets' : undefined,
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.alias['/Assets'] = join(__dirname, 'Assets');
+    }
+    return config;
+  },
+
   images: {
     unoptimized: true, // Required for static export to work with next/image
     remotePatterns: [
