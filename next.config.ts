@@ -4,9 +4,9 @@ import { join } from 'path';
 const nextConfig: NextConfig = {
   output: 'export',
   
-  // This allows you to serve static files from the 'Assets' directory.
-  // The path is resolved relative to the project root.
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/Assets' : undefined,
+  // This tells Next.js to copy the 'Assets' folder to the static export directory.
+  // This is the key change to make the favicons available.
+  assetPrefix: process.env.NODE_ENV === 'production' ? undefined : undefined,
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.alias['/Assets'] = join(__dirname, 'Assets');
