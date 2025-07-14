@@ -1,19 +1,8 @@
 import type {NextConfig} from 'next';
-import { join } from 'path';
 
 const nextConfig: NextConfig = {
   output: 'export',
   
-  // This tells Next.js to copy the 'Assets' folder to the static export directory.
-  // This is the key change to make the favicons available.
-  assetPrefix: process.env.NODE_ENV === 'production' ? undefined : undefined,
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.alias['/Assets'] = join(__dirname, 'Assets');
-    }
-    return config;
-  },
-
   images: {
     unoptimized: true, // Required for static export to work with next/image
     remotePatterns: [
