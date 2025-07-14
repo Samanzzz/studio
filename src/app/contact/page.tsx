@@ -1,9 +1,51 @@
+
+"use client";
+
+import * as React from 'react';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
 import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { siteData } from "@/lib/data";
 
 export default function ContactPage() {
   const { contact } = siteData;
+  const [result, setResult] = React.useState("");
+  const [isSuccess, setIsSuccess] = React.useState(false);
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult("Sending....");
+    setIsSuccess(false);
+
+    const formData = new FormData(event.target as HTMLFormElement);
+    formData.append("access_key", "318db7ff-a710-47ee-9852-d56ada295461");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        setIsSuccess(true);
+        (event.target as HTMLFormElement).reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+        setIsSuccess(false);
+      }
+    } catch (error) {
+        console.error("Submission Error", error);
+        setResult("An error occurred while submitting the form.");
+        setIsSuccess(false);
+    }
+  };
+
   return (
     <div className="w-full flex-1 flex flex-col items-center">
       <section id="contact" className="w-full max-w-5xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
@@ -37,19 +79,31 @@ export default function ContactPage() {
             </Button>
         </div>
 
-        <div className="w-full max-w-4xl mx-auto">
-            <iframe
-                src={contact.formUrl}
-                width="100%"
-                height="800"
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
-                className="rounded-lg shadow-lg border"
-                title="Research/Professional Inquiry Form"
-            >
-                Loading…
-            </iframe>
+        <div className="w-full max-w-2xl mx-auto p-8 border rounded-lg shadow-lg bg-card">
+          <form onSubmit={onSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="name">Full Name</Label>
+                <Input id="name" type="text" name="name" placeholder="Your Name" required />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email">Email Address</Label>
+                <Input id="email" type="email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="message">Message</Label>
+              <Textarea id="message" name="message" placeholder="Your message here..." required rows={6} />
+            </div>
+            <div className="flex items-center justify-between">
+              <Button type="submit" size="lg">Submit Form</Button>
+              {result && (
+                <span className={`text-sm font-medium ${isSuccess ? 'text-green-600' : 'text-destructive'}`}>
+                  {result}
+                </span>
+              )}
+            </div>
+          </form>
         </div>
       </section>
     </div>
