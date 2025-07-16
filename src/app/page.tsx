@@ -1,9 +1,14 @@
+
+"use client";
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Github, Linkedin, Mail, ArrowRight, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 import { siteData } from '@/lib/data';
+import React, { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
 
 // Helper function to escape regex special characters
 const escapeRegExp = (string: string) => {
@@ -53,6 +58,31 @@ function AboutContent() {
         <p key={i}>{renderParagraph(p)}</p>
       ))}
     </>
+  );
+}
+
+function Typewriter({ text, speed = 50, className }: { text: string; speed?: number; className?: string }) {
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    setDisplayedText(''); // Reset on text change
+    let i = 0;
+    const intervalId = setInterval(() => {
+      setDisplayedText((prev) => prev + text.charAt(i));
+      i++;
+      if (i >= text.length) {
+        clearInterval(intervalId);
+      }
+    }, speed);
+
+    return () => clearInterval(intervalId);
+  }, [text, speed]);
+
+  return (
+    <p className={cn(className)}>
+      {displayedText}
+      <span className="animate-pulse">|</span>
+    </p>
   );
 }
 
@@ -137,9 +167,7 @@ export default function Home() {
                   </div>
                 </CardHeader>
                 <CardContent className="prose prose-lg max-w-none text-foreground/90 leading-relaxed">
-                    <p>
-                      {latestPost.postText}
-                    </p>
+                    <Typewriter text={latestPost.postText} />
                     <p className="text-primary font-semibold">
                       {latestPost.hashtags}
                     </p>
