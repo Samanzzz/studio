@@ -61,7 +61,7 @@ function AboutContent() {
   );
 }
 
-function Typewriter({ text, speed = 50, className }: { text: string; speed?: number; className?: string }) {
+function Typewriter({ text, speed = 30, className }: { text: string; speed?: number; className?: string }) {
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
