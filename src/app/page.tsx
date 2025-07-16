@@ -167,14 +167,14 @@ export default function Home() {
                   </div>
                 </CardHeader>
                 <CardContent className="prose prose-lg max-w-none text-foreground/90 leading-relaxed">
-                    <Typewriter text={latestPost.postText} />
+                    <Typewriter text={latestPost.postText} speed={30} />
                     <p className="text-primary font-semibold">
                       {latestPost.hashtags}
                     </p>
                 </CardContent>
                 <CardFooter>
                     <Button asChild variant="ghost">
-                        <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/posts/samankhadivar_im-happy-to-share-that-im-starting-a-new-activity-7240370232945483778-tFKJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEEw6oBRqzPpyEccKr70djzQYP-fF74Ajw" target="_blank" rel="noopener noreferrer">
                            <MessageSquare className="mr-2 h-5 w-5"/> View on LinkedIn
                         </a>
                     </Button>
