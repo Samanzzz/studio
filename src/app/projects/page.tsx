@@ -1,7 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
 import { siteData } from '@/lib/data';
 
 const { projects } = siteData;
@@ -18,15 +16,10 @@ export default function ProjectsPage() {
                 <CardTitle className="text-xl font-serif font-bold text-primary">{project.title}</CardTitle>
                 <CardDescription className="text-muted-foreground">{project.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex-grow flex flex-col justify-between">
-                <div className="flex flex-wrap gap-2 mb-6">
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, i) => <Badge key={i} variant="outline" className="text-primary border-primary/50">{tag}</Badge>)}
                 </div>
-                <Button variant="ghost" asChild className="mt-auto w-fit text-primary hover:bg-primary/10 hover:text-primary">
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    View Project <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
               </CardContent>
             </Card>
           ))}
