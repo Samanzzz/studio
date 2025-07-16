@@ -53,13 +53,13 @@ export const siteData = {
             role: "Co-Founder",
             company: "SullDog Company",
             period: "Acquired",
-            logo: "https://cyrutech.com/assets/images/logo/sulldog-logoo.png"
+            logo: "https://raw.githubusercontent.com/Samanzzz/Cyruweb/master/assets/images/logo/sulldog-logoo.png"
         },
         {
             role: "Co-Founder",
             company: "Cloud Impala",
             period: "Startup",
-            logo: "https://cyrutech.com/assets/images/logo/impala-logo.png"
+            logo: "https://raw.githubusercontent.com/Samanzzz/Cyruweb/master/assets/images/logo/impala-logo.png"
         }
     ],
     projects: [
