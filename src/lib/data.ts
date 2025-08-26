@@ -18,12 +18,6 @@ export const siteData = {
             "Computer Science and Engineering Society at UCSD (CSES)": "https://csesucsd.com/about"
         }
     },
-    latestPost: {
-        author: "Saman Khadivar",
-        platform: "LinkedIn",
-        postText: "Thrilled to announce that I have started a new position as a Software Development Engineer at Amazon Web Services (AWS) on the S3 team! I'm incredibly excited to join such an innovative team and contribute to the services that power so much of the internet. Looking forward to the challenges and growth ahead.",
-        hashtags: "#AWS #S3 #SoftwareEngineer #NewBeginnings #CloudComputing",
-    },
     experience: [
         {
             role: "Software Dev Engineer",
