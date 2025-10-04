@@ -17,7 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <head>
-        <link rel="icon" href="https://raw.githubusercontent.com/Samanzzz/studio/master/Assets/favicon-32x32.png" type="image/png" sizes="any" />
+        <link rel="icon" href="https://github.com/Samanzzz/studio/blob/master/favicon.ico?raw=true" type="image/x-icon" />
+        <link rel="shortcut icon" href="https://github.com/Samanzzz/studio/blob/master/favicon.ico?raw=true" type="image/x-icon" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/Samanzzz/studio/master/Assets/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/Samanzzz/studio/master/Assets/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/Samanzzz/studio/master/Assets/favicon-16x16.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
